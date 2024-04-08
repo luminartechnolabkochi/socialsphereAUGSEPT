@@ -62,7 +62,7 @@ class Product(models.Model):
 
     description = models.TextField(null=True, blank=True)
 
-    size_object = models.ManyToManyField(Size,null=True)
+    size_object = models.ManyToManyField(Size)
 
     category_object = models.ForeignKey(Category, on_delete=models.CASCADE)
 
@@ -140,6 +140,8 @@ class Order(models.Model):
     delivery_address = models.CharField(max_length=250)
 
     phone = models.CharField(max_length=12)
+
+    pin=models.CharField(max_length=10,null=True)
 
     email = models.CharField(max_length=100)
 
