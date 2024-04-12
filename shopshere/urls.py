@@ -17,6 +17,29 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from shop import views
+
+from rest_framework.authtoken.views import ObtainAuthToken
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path("api/v1/register/",views.SignUpView.as_view()),
+
+    path("api/v1/token/",ObtainAuthToken.as_view()),
+
+    path("api/v1/products/",views.ProductListView.as_view()),
+
+    path("api/v1/products/<int:pk>/",views.ProductDetailView.as_view()),
+
+    path("api/v1/products/<int:pk>/addtocart/",views.AddToCartView.as_view())
+    
+
+
+    
+
+
 ]
+
