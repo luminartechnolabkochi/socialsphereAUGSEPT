@@ -34,10 +34,13 @@ urlpatterns = [
 
     path("api/v1/products/<int:pk>/",views.ProductDetailView.as_view()),
 
-    path("api/v1/products/<int:pk>/addtocart/",views.AddToCartView.as_view())
-    
+    path("api/v1/products/<int:pk>/addtocart/",views.AddToCartView.as_view()),
 
+    path("api/v1/carts/",views.CartListView.as_view()),
 
+    path("api/v1/carts/<int:pk>/",views.CartItemUpdateView.as_view()),
+
+    path("api/v1/order/",views.CheckOutView.as_view())
     
 
 

@@ -74,7 +74,7 @@
 
         authorization:Token
 
-        status:pending
+        status:completed
     
 
 ==========carts==========
@@ -89,7 +89,7 @@
 
         authorization:Token
 
-        status:pending
+        status:completed
 
     >>> api for updating a  cart item <<<<
     
@@ -105,7 +105,7 @@
 
         authorization:Token
 
-        status:pending
+        status:completed
 
 
 
@@ -140,7 +140,9 @@
 
             "email":"your email",
 
-            "payment_mode":"payment method"
+            "payment_mode":"payment method",
+
+            "pin":"your pin"
 
         }
 
